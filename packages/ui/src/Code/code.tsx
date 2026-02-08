@@ -1,6 +1,6 @@
 import { type JSX } from "react";
 
-export function Code({
+function Code({
   children,
   className,
 }: {
@@ -9,3 +9,5 @@ export function Code({
 }): JSX.Element {
   return <code className={className}>{children}</code>;
 }
+
+export default Code

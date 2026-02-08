@@ -1,10 +1,37 @@
 {
-  "name": "@repo/ui",
-  "version": "0.0.0",
-  "private": true,
-  "exports": {
-    "./*": "./src/*.tsx"
+  "name": "@gw-example/ui",
+  "version": "0.0.1",
+  "private": false,
+  "sideEffects": false,
+
+    "exports": {
+    "./button": {
+      "types": "./dist/button/index.d.ts",
+      "import": "./dist/button/index.mjs",
+      "require": "./dist/button/index.cjs"
+    },
+    "./card": {
+      "types": "./dist/card/index.d.ts",
+      "import": "./dist/card/index.mjs",
+      "require": "./dist/card/index.cjs"
+    },
+    "./code": {
+      "types": "./dist/code/index.d.ts",
+      "import": "./dist/code/index.mjs",
+      "require": "./dist/code/index.cjs"
+    }
   },
+
+    "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+
+    "publishConfig": {
+    "access": "public"
+  },
+
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
@@ -24,3 +51,5 @@
     "react-dom": "^19.2.0"
   }
 }
+
+

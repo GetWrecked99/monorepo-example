@@ -1,6 +1,6 @@
 import { type JSX } from "react";
 
-export function Card({
+function Card({
   className,
   title,
   children,
@@ -25,3 +25,5 @@ export function Card({
     </a>
   );
 }
+
+export default Card
